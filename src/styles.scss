@@ -1,6 +1,6 @@
-@use "./scss/_reset.scss";
-@use "./scss/_variables.scss";
-@use "./scss/_rem-calc.scss";
+@import "./scss/_reset.scss";
+@import "./scss/_variables.scss";
+@import "./scss/_rem-calc.scss";
 
 body {
   font-family: "Quicksand", sans-serif;
