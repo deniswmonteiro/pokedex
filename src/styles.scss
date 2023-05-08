@@ -1,1 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./scss/_reset.scss";
+@use "./scss/_variables.scss";
+@use "./scss/_rem-calc.scss";
+
+body {
+  font-family: "Quicksand", sans-serif;
+  background-color: var(--primary-color);
+}
+
+main {
+  width: rem-calc(600);
+  margin: 0 auto;
+}
