@@ -1,1 +1,8 @@
-<p>search works!</p>
+<form action="#">
+    <input type="text" placeholder="Buscar Pokémon"
+        id="search"
+        name="search"
+        (keyup)="postPokemonSearch(search.value)"
+        #search>
+    <img src="../../../assets/icons/search.svg" alt="Buscar">
+</form>

@@ -1,1 +1,23 @@
-<p>list works!</p>
+<app-search (emitSearch)="getPokemonSearch($event)"></app-search>
+
+<section>
+    <ng-template ngFor let-pokemon [ngForOf]="getAllPokemons">
+        <div>
+            <a [routerLink]="['detalhes', pokemon.details.id]" class="pokemon" *ngIf="pokemon.details">
+                <div class="pokemon__info">
+                    <h2>{{pokemon.name}}</h2>
+                    
+                    <ul>
+                        <li *ngFor="let value of pokemon.details.types">
+                            {{value.type.name}}
+                        </li>
+                    </ul>
+                </div>
+                <div class="pokemon__image">
+                    <img [src]="pokemon.details.sprites.other.dream_world.front_default"
+                        [alt]="pokemon.name">
+                </div>
+            </a>
+        </div>
+    </ng-template>
+</section>
