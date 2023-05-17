@@ -3,14 +3,15 @@
 <main>
     <ng-template [ngIf]="loaded">
         <section class="pokemon__names">
-            <h1>{{pokemon[0].name}}</h1>
-            <h2>{{pokemon[1].names[0].name}}</h2>
+            <h1 class="slideInLeft">{{pokemon[0].name}}</h1>
+            <h2 class="slideInRight">{{pokemon[1].names[0].name}}</h2>
         </section>
         <section class="pokemon__status">
             <img [src]="pokemon[0].sprites.other.dream_world.front_default"
-                [alt]="pokemon[0].name">
+                [alt]="pokemon[0].name"
+                class="slideInDown">
         </section>
-        <article class="pokemon__status__statistics">
+        <article class="pokemon__status__statistics fadeIn">
             <section>
                 <h3>Estatísticas</h3>
                 <ol>
@@ -25,4 +26,9 @@
             </a>
         </article>
     </ng-template>
+
+    <img src="../../../assets/error.png"
+        alt="Erro no carregamento da API"
+        width="100%"
+        *ngIf="apiError">
 </main>
